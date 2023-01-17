@@ -1,0 +1,34 @@
+Menu of peak shape numbers:
+
+Gaussians: y=exp(-((x-pos)./(0.6005615.*width)) .^2)
+  Gaussians with independent positions and widths : 1 (default)
+  Exponentional-broadened Gaussian (equal time constants): 5 
+  Exponentional-broadened equal-width Gaussian : 8
+  Fixed-width exponentionally-broadened Gaussian = 36
+  Exponentional-broadened Gaussian (independent time constants): 31 
+  Gaussians with the same widths : 6
+  Gaussians with preset fixed widths : 11
+  Fixed-position Gaussians : 16 
+  Asymmetrical Gaussians with unequal half-widths on both sides : 14
+Lorentzians: y=ones(size(x))./(1+((x-pos)./(0.5.*width)).^2)
+  Lorentzians with independent positions and widths : 2
+  Exponentional-broadened Lorentzian : 18 
+  Equal-width Lorentzians : 7
+  Fixed-width Lorentzian : 12
+  Fixed-position Lorentzian : 17
+  Asymmetrical Lorentzians with unequal half-widths on both sides : 15
+Gaussian/Lorentzian blend (equal blends): 13
+  Fixed-width Gaussian/Lorentzian blend : 35
+  Gaussian/Lorentzian blend with independent blends): 33
+Voigt profile with equal alphas): 20
+  Fixed-width Voigt profile with equal alphas : 34
+  Voigt profile with independent alphas : 30
+Logistic: n=exp(-((x-pos)/(.477.*wid)).^2); y=(2.*n)./(1+n) : 3 
+Pearson: y=ones(size(x))./(1+((x-pos)./((0.5.^(2/m)).*wid)).^2).^m : 4
+  Fixed-width Pearson = 37
+  Pearson with independent shape factors, m : 32
+Exponential pulse: y=(x-tau2)./tau1.*exp(1-(x-tau2)./tau1) : 9
+Alpha function: y=(x-spoint)./pos.*exp(1-(x-spoint)./pos); : 19
+Up Sigmoid (logistic function): y=.5+.5*erf((x-tau1)/sqrt(2*tau2)) : 10
+Down Sigmoid y=.5-.5*erf((x-tau1)/sqrt(2*tau2) ): 23
+Triangular : 21
